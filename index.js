@@ -40,10 +40,11 @@ $("#dataTable").ready(function () {
         
             console.log(response[i])
             td1.innerHTML = response[i]['id'];
-            td2.innerHTML = response[i]['namaBunga'];
-            td3.innerHTML = response[i]['warnaBunga'];
-            td4.innerHTML = response[i]['jenisBunga'];
-            td5.innerHTML = `<div class ="justify content-center">
+            td2.innerHTML = response[i]['Nama_Obat'];
+            td3.innerHTML = response[i]['Harga'];
+            td4.innerHTML = response[i]['Expired'];
+            td5.innerHTML = response[i]['Jumlah'];
+            td6.innerHTML = `<div class ="justify content-center">
             <a class="btn ms-2" style="background-color: #858ab3; border:none;" href="updateData.html?id=${response[i].id}">Edit</a>
             <button type ="button" class="btn ms-2" style="background-color: #858ab3; border:none;" onclick="del(${response[i].id});">Delete</button>
             </div>`
