@@ -13,7 +13,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Toko Bunga</a>
+      <a class="navbar-brand" href="index.html">Apotek</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
   <section>
     <div class="container">
 
-      <h1 style="margin-top: 50px;">Toko Bunga</h1>
+      <h1 style="margin-top: 50px;">Apotek</h1>
       <a class="btn btn-success ms-2 mt-5" style="background-color: #b385a8; border:none; margin-bottom: 30px;" href="addData.html">Add Data</a>
       
       <div class="container">
@@ -32,11 +32,11 @@
         <div class="p-2 bd-highlight"></div>
       <table id="dataTable" class="table table-bordered table-hover">
           <thead>
-              <th scope="col">Id Bunga</th>
-              <th scope="col">Nama Bunga</th>
-              <th scope="col">Warna Bunga</th>
-              <th scope="col">Jenis Bunga</th>
-              <th scope="col">Controls</th>
+              <th scope="col">Id Obat</th>
+              <th scope="col">Nama Obat</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Expired</th>
+              <th scope="col">Jumlah</th>
           </thead>
       </table>
     </div>
@@ -44,7 +44,7 @@
   
   <script>
     function getAll(){
-const respon = axios.get("http://localhost:8080/databarang/tokobunga")
+const respon = axios.get("http://localhost:8036/Apotek/Obat")
 const dr = respon.then(resp => resp.data)
 return dr
 }
@@ -61,7 +61,7 @@ return dr
     crossorigin="anonymous"></script>
     <script>
         function getAll(){
-    const respon = axios.get("http://localhost:8080/databarang/tokobunga")
+    const respon = axios.get("http://localhost:8036/Apotek/Obat")
     const dr = respon.then(resp => resp.data)
     return dr
         }
@@ -71,7 +71,7 @@ return dr
     <script>
       function del(id){
         if (window.confirm("Apakah anda ingin menghapus data?")===true) {
-            axios.delete(`http://localhost:8080/databarang/tokobunga/${id}`).then((result) => {
+            axios.delete(`http://localhost:8036/apotek/Obat/${id_Obat}`).then((result) => {
                 alert("Data Berhasil Dihapus")
                 window.location.href="/viewData.html"
             }).catch((err) => {
