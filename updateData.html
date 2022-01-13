@@ -95,7 +95,7 @@
             var params = url.searchParams.get("Id_Obat")
             console.log(params)
             axios.get(
-                'http://localhost:71/${params}'
+                'http://localhost:71/Obat/Apotek${params}'
             ).then((result) => {
                 console.log(result)
                 $("#Id_Obat").val(result.data.Id_Obat);
