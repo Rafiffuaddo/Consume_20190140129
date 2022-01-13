@@ -95,7 +95,7 @@
             var params = url.searchParams.get("Id_Obat")
             console.log(params)
             axios.get(
-                'http://localhost:71/Obat/Apotek${params}'
+                'http://localhost:8080/dataObat/Obat${params}'
             ).then((result) => {
                 console.log(result)
                 $("#Id_Obat").val(result.data.Id_Obat);
@@ -108,7 +108,7 @@
             });
         }
 
-      var url ="http://localhost:71/Obat/Apotek";
+      var url ="http://localhost:8080/dataObat/Obat";
       getData()
     </script>
 </body>

@@ -47,7 +47,7 @@
 
   <script>
     function getAll() {
-      const respon = axios.get("http://localhost:71/Apotek/Obat")
+      const respon = axios.get("http://localhost:8080/dataObat/Obat")
       const dr = respon.then(resp => resp.data)
       return dr
     }
@@ -64,7 +64,7 @@
     crossorigin="anonymous"></script>
   <script>
     function getAll() {
-      const respon = axios.get("http://localhost:71/Apotek/Obat")
+      const respon = axios.get("http://localhost:8080/dataObat/Obat")
       const dr = respon.then(resp => resp.data)
       return dr
     }
@@ -82,7 +82,7 @@
         });
       }
     }
-    var url = "http://localhost:71/apotek/Obat";
+    var url = "http://localhost:8080/dataObat/Obat";
   </script>
 
 </body>
