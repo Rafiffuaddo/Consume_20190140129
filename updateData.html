@@ -31,23 +31,23 @@
             <form>
               <div class="row">
                   <div class="form-group my-3">
-                    <label for="id" class="form-label">Id Obat</label>
-                    <input type="text" class="form-control" id="id_Obat" placeholder="Id obat">
+                    <label for="Id_Obat" class="form-label">Id Obat</label>
+                    <input type="text" class="form-control" id="Id_Obat" placeholder="Id obat">
                   </div>
                   <div class="form-group my-3">
-                    <label for="namaBunga" class="form-label">Obat</label>
+                    <label for="Obat" class="form-label">Obat</label>
                     <input type="text" class="form-control" id="Nama_Obat" placeholder="Nama Obat">
                   </div>
                   <div class="form-group my-3">
-                    <label for="warnaBunga" class="form-label">Harga</label>
+                    <label for="Harga" class="form-label">Harga</label>
                     <input type="text" class="form-control" id="Harga" placeholder="Harga">
                   </div>
                   <div class="form-group my-3">
-                    <label for="jenisBunga" class="form-label">Expired</label>
+                    <label for="Expired" class="form-label">Expired</label>
                     <input type="text" class="form-control" id="Expired" placeholder="Expired">
                   </div>
                   <div class="form-group my-3">
-                    <label for="jenisBunga" class="form-label">Jumlah</label>
+                    <label for="Jumlah" class="form-label">Jumlah</label>
                     <input type="text" class="form-control" id="Jumlah" placeholder="Jumlah">
                   </div>
                   </div>
@@ -66,10 +66,11 @@
     <script>
       function save(){
             var body = {
-              id:$("#id").val(),
-              namaBunga:$("#namaBunga").val(),
-              warnaBunga:$("#warnaBunga").val(),
-              jenisBunga:$("#jenisBunga").val(),
+              Id_Obat:$("#Id_Obat").val(),
+              Nama_Obat:$("#Nama_Obat").val(),
+              Harga:$("#Harga").val(),
+              Expired:$("#Expired").val(),
+              Jumlah:$("#Jumlah").val(),
             }
             var json = JSON.stringify(body)
             console.log(json)
@@ -91,22 +92,23 @@
 
         function getData(){
             var url = new URL($(location).attr("href"))
-            var params = url.searchParams.get("id")
+            var params = url.searchParams.get("Id_Obat")
             console.log(params)
             axios.get(
-                'http://localhost:8080/databarang/tokobunga/${params}'
+                'http://localhost:71/${params}'
             ).then((result) => {
                 console.log(result)
-                $("#id").val(result.data.id);
-                $("#namaBunga").val(result.data.namaBunga);
-                $("#warnaBunga").val(result.data.warnaBunga);
-                $("#jenisBunga").val(result.data.jenisBunga);
+                $("#Id_Obat").val(result.data.Id_Obat);
+                $("#Nama_Obat").val(result.data.Nama_Obat);
+                $("#Harga").val(result.data.Harga);
+                $("#Expired").val(result.data.Expired);
+                $("#Jumlah").val(result.data.Jumlah);
             }).catch((err) => {
                 console.log(error)
             });
         }
 
-      var url ="http://localhost:8080/databarang/tokobunga";
+      var url ="http://localhost:71/Obat/Apotek";
       getData()
     </script>
 </body>

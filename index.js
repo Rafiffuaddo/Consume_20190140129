@@ -25,8 +25,8 @@ $(document).ready(function() {
   });
   
 
-$("#dataTable").ready(function () {
-    var tabel = document.getElementById("dataTable")
+$("#Obat").ready(function () {
+    var tabel = document.getElementById("Obat")
     getAll().then(response => {
         console.log(response)
         for(var i = 0; i <response.length; i++){
