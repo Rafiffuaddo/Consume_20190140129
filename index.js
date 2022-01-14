@@ -39,7 +39,7 @@ $("#Obat").ready(function () {
 
         
             console.log(response[i])
-            td1.innerHTML = response[i]['id_Obat'];
+            td1.innerHTML = response[i]['Id_Obat'];
             td2.innerHTML = response[i]['Nama_Obat'];
             td3.innerHTML = response[i]['Harga'];
             td4.innerHTML = response[i]['Expired'];
