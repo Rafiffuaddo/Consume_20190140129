@@ -45,8 +45,8 @@ $("#Obat").ready(function () {
             td4.innerHTML = response[i]['Expired'];
             td5.innerHTML = response[i]['Jumlah'];
             td6.innerHTML = `<div class ="justify content-center">
-            <a class="btn ms-2" style="background-color: #858ab3; border:none;" href="updateData.html?id=${response[i].id}">Edit</a>
-            <button type ="button" class="btn ms-2" style="background-color: #858ab3; border:none;" onclick="del(${response[i].id});">Delete</button>
+            <a class="btn ms-2" style="background-color: #858ab3; border:none;" href="updateData.html?id=${response[i].Id_Obat}">Edit</a>
+            <button type ="button" class="btn ms-2" style="background-color: #858ab3; border:none;" onclick="del(${response[i].Id_Obat});">Delete</button>
             </div>`
             }
         }
