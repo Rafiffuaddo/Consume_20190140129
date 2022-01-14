@@ -74,7 +74,7 @@
   <script>
     function del(id) {
       if (window.confirm("Apakah anda ingin menghapus data?") === true) {
-        axios.delete(`http://localhost:71/apotek/Obat/${Id_Obat}`).then((result) => {
+        axios.delete(`http://localhost:8080/dataObat/Obat/${Id_Obat}`).then((result) => {
           alert("Data Berhasil Dihapus")
           window.location.href = "/viewData.html"
         }).catch((err) => {
